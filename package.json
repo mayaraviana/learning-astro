@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "astro": "^1.0.0-rc.3"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
   }
 }
