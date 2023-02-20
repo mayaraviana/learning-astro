@@ -1,372 +1,50 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout title="Admin DashBoard">
-	<main class="container-fluid">
-		<div class="row no-gutters">
-			<div class="col-3 no-gutters">
-				<Nav></Nav>
-			</div>
-			<div class="col-9 ">
-				<div class="content-w">
-					<div class="top-bar color-scheme-transparent">
-						<div class="top-menu-controls">
-							<div class="element-search autosuggest-search-activator"><input placeholder="Start typing to search...">
-							</div>
-							<div class="messages-notifications os-dropdown-trigger os-dropdown-position-left"><i
-									class="os-icon os-icon-mail-14"></i>
-								<div class="new-messages-count">12</div>
-								<div class="os-dropdown light message-list">
-									<ul>
-										<li><a href="#">
-												<div class="user-avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar1.jpg"></div>
-												<div class="message-content">
-													<h6 class="message-from">John Mayers</h6>
-													<h6 class="message-title">Account Update</h6>
-												</div>
-											</a></li>
-										<li><a href="#">
-												<div class="user-avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar2.jpg"></div>
-												<div class="message-content">
-													<h6 class="message-from">Phil Jones</h6>
-													<h6 class="message-title">Secutiry Updates</h6>
-												</div>
-											</a></li>
-										<li><a href="#">
-												<div class="user-avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar3.jpg"></div>
-												<div class="message-content">
-													<h6 class="message-from">Bekky Simpson</h6>
-													<h6 class="message-title">Vacation Rentals</h6>
-												</div>
-											</a></li>
-										<li><a href="#">
-												<div class="user-avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar4.jpg"></div>
-												<div class="message-content">
-													<h6 class="message-from">Alice Priskon</h6>
-													<h6 class="message-title">Payment Confirmation</h6>
-												</div>
-											</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left"><i
-									class="os-icon os-icon-ui-46"></i>
-								<div class="os-dropdown">
-									<div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div>
-									<ul>
-										<li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>Profile
-													Settings</span></a></li>
-										<li><a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Billing
-													Info</span></a></li>
-										<li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-44"></i><span>My
-													Invoices</span></a></li>
-										<li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-15"></i><span>Cancel
-													Account</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="logged-user-w">
-								<div class="logged-user-i">
-									<div class="avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar1.jpg"></div>
-									<div class="logged-user-menu color-style-bright">
-										<div class="logged-user-avatar-info">
-											<div class="avatar-w"><img alt="" src="./../../assets/./../../assets/img/avatar1.jpg"></div>
-											<div class="logged-user-info-w">
-												<div class="logged-user-name">Maria Gomez</div>
-												<div class="logged-user-role">Administrator</div>
-											</div>
-										</div>
-										<div class="bg-icon"><i class="os-icon os-icon-wallet-loaded"></i></div>
-										<ul>
-											<li><a href="apps_email.html"><i class="os-icon os-icon-mail-01"></i><span>Incoming
-														Mail</span></a></li>
-											<li><a href="users_profile_big.html"><i
-														class="os-icon os-icon-user-male-circle2"></i><span>Profile Details</span></a></li>
-											<li><a href="users_profile_small.html"><i class="os-icon os-icon-coins-4"></i><span>Billing
-														Details</span></a></li>
-											<li><a href="#"><i class="os-icon os-icon-others-43"></i><span>Notifications</span></a>
-											</li>
-											<li><a href="#"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-						<li class="breadcrumb-item"><a href="index.html">Products</a></li>
-						<li class="breadcrumb-item"><span>Laptop with retina screen</span></li>
-					</ul>
-					<div class="content-box">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="element-wrapper">
-										<div class="element-actions">
-											<form class="form-inline justify-content-sm-end"><select class="form-control form-control-sm">
-													<option value="Pending">Today</option>
-													<option value="Active">Last Week </option>
-													<option value="Cancelled">Last 30 Days</option>
-												</select></form>
-										</div>
-										<h6 class="element-header">Sales Dashboard</h6>
-										<div class="element-content">
-											<div class="row">
-												<div class="col-sm-4 col-xxxl-3"><a class="element-box el-tablo" href="#">
-														<div class="label">Products Sold</div>
-														<div class="value">57</div>
-														<div class="trending trending-up-basic"><span>12%</span><i
-																class="os-icon os-icon-arrow-up2"></i></div>
-													</a></div>
-												<div class="col-sm-4 col-xxxl-3"><a class="element-box el-tablo" href="#">
-														<div class="label">Gross Profit</div>
-														<div class="value">$457</div>
-														<div class="trending trending-down-basic"><span>12%</span><i
-																class="os-icon os-icon-arrow-down"></i></div>
-													</a></div>
-												<div class="col-sm-4 col-xxxl-3"><a class="element-box el-tablo" href="#">
-														<div class="label">New Customers</div>
-														<div class="value">125</div>
-														<div class="trending trending-down-basic"><span>9%</span><i
-																class="os-icon os-icon-arrow-down"></i></div>
-													</a></div>
-												<div class="d-none d-xxxl-block col-xxxl-3"><a class="element-box el-tablo" href="#">
-														<div class="label">Refunds Processed</div>
-														<div class="value">$294</div>
-														<div class="trending trending-up-basic"><span>12%</span><i
-																class="os-icon os-icon-arrow-up2"></i></div>
-													</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-8 col-xxxl-6">
-									<div class="element-wrapper">
-										<h6 class="element-header">New Orders</h6>
-										<div class="element-box">
-											<div class="table-responsive">
-												<table class="table table-lightborder">
-													<thead>
-														<tr>
-															<th>Customer</th>
-															<th>Products</th>
-															<th class="text-center">Status</th>
-															<th class="text-right">Total</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td class="nowrap">John Mayers</td>
-															<td>
-																<div class="cell-image-list">
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio9.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio2.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio12.jpg)"></div>
-																	<div class="cell-img-more">+ 5 more</div>
-																</div>
-															</td>
-															<td class="text-center">
-																<div class="status-pill green" data-title="Complete" data-toggle="tooltip"
-																	data-original-title="" title=""></div>
-															</td>
-															<td class="text-right">$354</td>
-														</tr>
-														<tr>
-															<td class="nowrap">Kelly Brans</td>
-															<td>
-																<div class="cell-image-list">
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio14.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio8.jpg)"></div>
-																</div>
-															</td>
-															<td class="text-center">
-																<div class="status-pill red" data-title="Cancelled" data-toggle="tooltip"
-																	data-original-title="" title=""></div>
-															</td>
-															<td class="text-right">$94</td>
-														</tr>
-														<tr>
-															<td class="nowrap">Tim Howard</td>
-															<td>
-																<div class="cell-image-list">
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio16.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio14.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio5.jpg)"></div>
-																</div>
-															</td>
-															<td class="text-center">
-																<div class="status-pill green" data-title="Complete" data-toggle="tooltip"
-																	data-original-title="" title=""></div>
-															</td>
-															<td class="text-right">$156</td>
-														</tr>
-														<tr>
-															<td class="nowrap">Joe Trulli</td>
-															<td>
-																<div class="cell-image-list">
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio1.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio5.jpg)"></div>
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio6.jpg)"></div>
-																	<div class="cell-img-more">+ 2 more</div>
-																</div>
-															</td>
-															<td class="text-center">
-																<div class="status-pill yellow" data-title="Pending" data-toggle="tooltip"
-																	data-original-title="" title=""></div>
-															</td>
-															<td class="text-right">$1,120</td>
-														</tr>
-														<tr>
-															<td class="nowrap">Jerry Lingard</td>
-															<td>
-																<div class="cell-image-list">
-																	<div class="cell-img" style="background-image: url(./../../assets/./../../assets/img/portfolio9.jpg)"></div>
-																</div>
-															</td>
-															<td class="text-center">
-																<div class="status-pill green" data-title="Complete" data-toggle="tooltip"
-																	data-original-title="" title=""></div>
-															</td>
-															<td class="text-right">$856</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4 d-xxxl-none">
-									<div class="element-wrapper">
-										<h6 class="element-header">Top Selling Today</h6>
-										<div class="element-box">
-											<div class="el-chart-w">
-												<div class="chartjs-size-monitor">
-													<div class="chartjs-size-monitor-expand">
-														<div class=""></div>
-													</div>
-													<div class="chartjs-size-monitor-shrink">
-														<div class=""></div>
-													</div>
-												</div><canvas height="372" id="donutChart" width="372" class="chartjs-render-monitor"
-													style="display: block; width: 186px; height: 186px;"></canvas>
-												<div class="inside-donut-chart-label"><strong>142</strong><span>Total Orders</span></div>
-											</div>
-											<div class="el-legend condensed">
-												<div class="row">
-													<div class="col-auto col-xxxxl-6 ml-sm-auto mr-sm-auto col-6">
-														<div class="legend-value-w">
-															<div class="legend-pin legend-pin-squared" style="background-color: #6896f9;"></div>
-															<div class="legend-value"><span>Prada</span>
-																<div class="legend-sub-value">14 Pairs</div>
-															</div>
-														</div>
-														<div class="legend-value-w">
-															<div class="legend-pin legend-pin-squared" style="background-color: #85c751;"></div>
-															<div class="legend-value"><span>Maui Jim</span>
-																<div class="legend-sub-value">26 Pairs</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-6 d-lg-none d-xxl-block">
-														<div class="legend-value-w">
-															<div class="legend-pin legend-pin-squared" style="background-color: #806ef9;"></div>
-															<div class="legend-value"><span>Gucci</span>
-																<div class="legend-sub-value">17 Pairs</div>
-															</div>
-														</div>
-														<div class="legend-value-w">
-															<div class="legend-pin legend-pin-squared" style="background-color: #d97b70;"></div>
-															<div class="legend-value"><span>Armani</span>
-																<div class="legend-sub-value">12 Pairs</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="d-none d-xxxl-block col-xxxl-6">
-									<div class="element-wrapper">
-										<div class="element-actions">
-											<form class="form-inline justify-content-sm-end"><select
-													class="form-control form-control-sm rounded">
-													<option value="Pending">Today</option>
-													<option value="Active">Last Week </option>
-													<option value="Cancelled">Last 30 Days</option>
-												</select></form>
-										</div>
-										<h6 class="element-header">Inventory Stats</h6>
-										<div class="element-box">
-											<div class="os-progress-bar primary">
-												<div class="bar-labels">
-													<div class="bar-label-left"><span class="bigger">Eyeglasses</span></div>
-													<div class="bar-label-right"><span class="info">25 items / 10 remaining</span></div>
-												</div>
-												<div class="bar-level-1" style="width: 100%">
-													<div class="bar-level-2" style="width: 70%">
-														<div class="bar-level-3" style="width: 40%"></div>
-													</div>
-												</div>
-											</div>
-											<div class="os-progress-bar primary">
-												<div class="bar-labels">
-													<div class="bar-label-left"><span class="bigger">Outwear</span></div>
-													<div class="bar-label-right"><span class="info">18 items / 7 remaining</span></div>
-												</div>
-												<div class="bar-level-1" style="width: 100%">
-													<div class="bar-level-2" style="width: 40%">
-														<div class="bar-level-3" style="width: 20%"></div>
-													</div>
-												</div>
-											</div>
-											<div class="os-progress-bar primary">
-												<div class="bar-labels">
-													<div class="bar-label-left"><span class="bigger">Shoes</span></div>
-													<div class="bar-label-right"><span class="info">15 items / 12 remaining</span></div>
-												</div>
-												<div class="bar-level-1" style="width: 100%">
-													<div class="bar-level-2" style="width: 60%">
-														<div class="bar-level-3" style="width: 30%"></div>
-													</div>
-												</div>
-											</div>
-											<div class="os-progress-bar primary">
-												<div class="bar-labels">
-													<div class="bar-label-left"><span class="bigger">Jeans</span></div>
-													<div class="bar-label-right"><span class="info">12 items / 4 remaining</span></div>
-												</div>
-												<div class="bar-level-1" style="width: 100%">
-													<div class="bar-level-2" style="width: 30%">
-														<div class="bar-level-3" style="width: 10%"></div>
-													</div>
-												</div>
-											</div>
-											<div class="mt-4 border-top pt-3">
-												<div class="element-actions d-none d-sm-block">
-													<form class="form-inline justify-content-sm-end"><select
-															class="form-control form-control-sm form-control-faded">
-															<option selected="true">Last 30 days</option>
-															<option>This Week</option>
-															<option>This Month</option>
-															<option>Today</option>
-														</select></form>
-												</div>
-												<h6 class="element-box-header">Inventory History</h6>
-												<div class="el-chart-w"><canvas data-chart-data="13,28,19,24,43,49,40,35,42,46,38,32,45"
-														height="0" id="liteLineChartV3" width="0" class="chartjs-render-monitor"
-														style="display: block; width: 0px; height: 0px;"></canvas></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-				</div>
-			</div>
-		</div>
-	</main>
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<p>
+				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+				template serves as a lightweight, minimally-styled starting point for anyone looking to build
+				a personal website, blog, or portfolio with Astro.
+			</p>
+			<p>
+				This template comes with a few integrations already configured in your
+				<code>astro.config.mjs</code> file. You can customize your setup with
+				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
+				React, or Vue to your project.
+			</p>
+			<p>Here are a few ideas on how to get started with the template:</p>
+			<ul>
+				<li>Edit this page in <code>src/pages/index.astro</code></li>
+				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
+				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
+				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
+				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+			</ul>
+			<p>
+				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
+					>read the docs
+				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+			</p>
+			<p>
+				Looking for a blog template with a bit more personality? Check out <a
+					href="https://github.com/Charca/astro-blog-template"
+					>astro-blog-template
+				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
